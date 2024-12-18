@@ -20,9 +20,15 @@ $container-width: 60rem;
 $container-width-tablet: 90vw;
 $container-width-mobile: 95vw;
 
+// Navigation and Footer
+$navbar-height: 4rem;  // Explicit height for the navbar
+$navbar-padding: 1rem;
+$footer-height: 3rem;  // Added footer height
+
+// Content
+$content-padding: 2rem;
+
 // Spacing
-$navbar-height: 4rem;
-$content-padding: 3rem;
 
 // Export variables
 :root {
