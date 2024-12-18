@@ -1,0 +1,16 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Local development
+_config_local.yml
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

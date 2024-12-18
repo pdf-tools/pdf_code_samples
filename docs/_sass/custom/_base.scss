@@ -1,0 +1,68 @@
+// Base styles
+html {
+  box-sizing: border-box;
+  font-size: var(--ifm-font-size-base);
+  font-family: var(--ifm-font-family-base);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-weight: var(--ifm-font-weight-normal);
+  line-height: var(--ifm-line-height-base);
+  margin: 0;
+  padding: 0;
+  background-color: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-color);
+}
+
+// Typography
+.main-content {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+  }
+
+  h4 {
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+// Links
+a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}

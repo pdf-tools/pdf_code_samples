@@ -1,0 +1,30 @@
+<div>
+  <ul class="closure-nav">
+    {%- if site.social.facebook -%}
+    <li>
+      <a href="{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="{{ site.baseurl }}/assets/images/icons/facebook.svg" alt="Facebook" />
+      </a>
+    </li>
+    {%- endif -%}
+    
+    {%- if site.social.linkedin -%}
+    <li>
+      <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="{{ site.baseurl }}/assets/images/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+    </li>
+    {%- endif -%}
+    
+    {%- if site.social.x -%}
+    <li>
+      <a href="{{ site.social.x }}" target="_blank" rel="noopener noreferrer" aria-label="X">
+        <img src="{{ site.baseurl }}/assets/images/icons/x.svg" alt="X" />
+      </a>
+    </li>
+    {%- endif -%}
+
+    <!-- Spacer div -->
+    <div style="visibility: hidden; width: 120px"></div>
+  </ul>
+</div>

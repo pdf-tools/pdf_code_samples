@@ -1,0 +1,103 @@
+// Theme toggle button styles
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 0 0 1rem;
+    transition: background-color 0.2s;
+    color: var(--ifm-navbar-color);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+}
+
+// Theme variables
+:root {
+    --ifm-color-primary: #0D59F2;
+    --ifm-color-secondary: #8b8b89;
+    --ifm-color-success: #2ecc71;
+    --ifm-color-info: #3498db;
+    --ifm-color-warning: #f1c40f;
+    --ifm-color-danger: #e74c3c;
+    
+    // Grays
+    --ifm-color-gray-0: #f8f9fa;
+    --ifm-color-gray-100: #f1f3f5;
+    --ifm-color-gray-200: #e9ecef;
+    --ifm-color-gray-300: #dee2e6;
+    --ifm-color-gray-400: #ced4da;
+    --ifm-color-gray-500: #adb5bd;
+    --ifm-color-gray-600: #868e96;
+    --ifm-color-gray-700: #495057;
+    --ifm-color-gray-800: #343a40;
+    --ifm-color-gray-900: #212529;
+    
+    --ifm-navbar-background-color: #ffffff;
+    --ifm-navbar-color: #000000;
+    --ifm-background-color: #ffffff;
+    --ifm-font-color-base: #000000;
+}
+
+[data-theme='dark'] {
+    --ifm-color-primary: #4d8ef7;
+    --ifm-color-secondary: #a5a5a4;
+    --ifm-color-success: #40e083;
+    --ifm-color-info: #54a9e6;
+    --ifm-color-warning: #f4d03f;
+    --ifm-color-danger: #eb6b5e;
+    
+    // Grays - Inverted for dark mode
+    --ifm-color-gray-900: #f8f9fa;
+    --ifm-color-gray-800: #f1f3f5;
+    --ifm-color-gray-700: #e9ecef;
+    --ifm-color-gray-600: #dee2e6;
+    --ifm-color-gray-500: #ced4da;
+    --ifm-color-gray-400: #adb5bd;
+    --ifm-color-gray-300: #868e96;
+    --ifm-color-gray-200: #495057;
+    --ifm-color-gray-100: #343a40;
+    --ifm-color-gray-0: #212529;
+    
+    --ifm-navbar-background-color: #1b1b1d;
+    --ifm-navbar-color: #ffffff;
+    --ifm-background-color: #1b1b1d;
+    --ifm-font-color-base: #ffffff;
+    
+    body {
+        background-color: var(--ifm-background-color);
+        color: var(--ifm-font-color-base);
+    }
+}
+
+// Icon visibility
+html[data-theme='dark'] {
+    .light-mode-icon {
+        display: none;
+    }
+    .dark-mode-icon {
+        display: block;
+    }
+}
+
+html[data-theme='light'] {
+    .light-mode-icon {
+        display: block;
+    }
+    .dark-mode-icon {
+        display: none;
+    }
+}

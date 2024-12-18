@@ -1,0 +1,13 @@
+<div class="product-filter">
+    <div class="product-filter__buttons">
+        {% for product in site.products %}
+        {% assign product_id = product[0] %}
+        {% assign product_info = product[1] %}
+        <a href="{{ site.baseurl }}/products/{{ product_id }}" 
+           class="product-button {% if page.url contains product_id %}product-button--active{% endif %}">
+            <img src="{{ site.baseurl }}{{ product_info.icon }}" alt="{{ product_info.name }} icon">
+            <span>{{ product_info.name }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>

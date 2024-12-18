@@ -1,0 +1,125 @@
+---
+---
+
+@use "sass:color";
+@import "custom/variables";
+@import "custom/base";
+@import "custom/layout";
+@import "custom/header";
+@import "custom/navbar";
+@import "custom/footer";
+@import "custom/disclaimer";
+@import "custom/theme-toggle";
+@import "custom/syntax-highlighting";
+@import "custom/components";
+@import "custom/product-filter";
+@import "custom/product-info";
+
+// Base styles
+html {
+  font-size: var(--ifm-font-size-base);
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--ifm-font-family-base);
+  line-height: var(--ifm-line-height-base);
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ifm-color-black);
+  background-color: var(--ifm-color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90vw;
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 3rem 0;
+  
+  @media (max-width: 992px) {
+    width: 90vw;
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 640px) {
+    width: 95vw;
+    padding: 1.5rem 0;
+  }
+}
+
+.main-content {
+  margin-top: var(--ifm-navbar-height);
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+  > .container {
+    flex: 1 0 auto;
+  }
+}
+
+.footer {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+// Links
+a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Code blocks
+pre {
+  background-color: var(--ifm-color-gray-100);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+code {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  background-color: var(--ifm-color-gray-100);
+  border-radius: 0.25rem;
+}
+
+// Disclaimer box
+blockquote {
+  background-color: var(--ifm-color-gray-100);
+  border-left: 4px solid var(--ifm-color-primary);
+  margin: 1rem 0;
+  padding: 1rem;
+  
+  &.disclaimer {
+    background-color: #fff8dc;
+    border-left-color: #f0ad4e;
+    
+    strong {
+      color: #d9534f;
+    }
+  }
+}

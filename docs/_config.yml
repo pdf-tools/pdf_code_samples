@@ -1,0 +1,82 @@
+# Site settings
+title: PDF Tools Code Samples
+description: A collection of code samples and tutorials for PDF Tools products
+baseurl: "/pdf_code_samples"
+url: ""
+lang: en
+
+# Theme settings
+theme_color: light # light or dark
+
+# Products configuration
+products:
+  convsrv:
+    name: "Conversion Service"
+    description: "Scalable document conversion solution"
+    icon: "/assets/images/products/conversion-service.png"
+  sdk:
+    name: "PDF Tools SDK"
+    description: "PDF development toolkit"
+    icon: "/assets/images/products/pdf-toolbox-sdk.png"
+  webviewer:
+    name: "Web Viewer"
+    description: "Browser-based PDF viewing solution"
+    icon: "/assets/images/products/pdf-web-viewer.png"
+
+# Social Media Links
+social:
+  facebook: https://www.facebook.com/pdftoolsag
+  linkedin: https://www.linkedin.com/company/pdf-tools-ag
+  x: https://x.com/pdftoolscom
+  discord: https://discord.gg/zE83Kw6bqK
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+highlighter: rouge
+sass:
+  style: compressed
+  sass_dir: _sass
+  
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - README.md
+  - LICENSE
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  tutorials:
+    output: true
+    permalink: /tutorials/:path/
+
+# Default front matter settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "_tutorials"
+      type: tutorials
+    values:
+      layout: default

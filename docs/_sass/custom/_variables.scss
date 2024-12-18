@@ -1,0 +1,75 @@
+// Brand Colors
+$primary-color: #0D59F2;
+$secondary-color: #8b8b89;
+
+// Typography
+$font-family-base: "Source Sans Pro", system-ui, -apple-system, sans-serif;
+$font-size-base: 16px;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.5rem;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 900;
+$line-height-base: 1.6;
+$line-height-heading: 1.2;
+
+// Layout
+$container-width: 60rem;
+$container-width-tablet: 90vw;
+$container-width-mobile: 95vw;
+
+// Spacing
+$navbar-height: 4rem;
+$content-padding: 3rem;
+
+// Export variables
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  
+  // Theme colors
+  --ifm-color-primary: #{$primary-color};
+  --ifm-color-secondary: #{$secondary-color};
+  --ifm-color-success: #2ecc71;
+  --ifm-color-info: #3498db;
+  --ifm-color-warning: #f1c40f;
+  --ifm-color-danger: #e74c3c;
+  
+  // Grays
+  --ifm-color-gray-0: #f8f9fa;
+  --ifm-color-gray-100: #f1f3f5;
+  --ifm-color-gray-200: #e9ecef;
+  --ifm-color-gray-300: #dee2e6;
+  --ifm-color-gray-400: #ced4da;
+  --ifm-color-gray-500: #adb5bd;
+  --ifm-color-gray-600: #868e96;
+  --ifm-color-gray-700: #495057;
+  --ifm-color-gray-800: #343a40;
+  --ifm-color-gray-900: #212529;
+  
+  // Typography
+  --ifm-font-family-base: #{$font-family-base};
+  --ifm-font-size-base: #{$font-size-base};
+  --ifm-h1-font-size: #{$font-size-h1};
+  --ifm-h2-font-size: #{$font-size-h2};
+  --ifm-h3-font-size: #{$font-size-h3};
+  --ifm-font-weight-normal: #{$font-weight-normal};
+  --ifm-font-weight-medium: #{$font-weight-medium};
+  --ifm-font-weight-semibold: #{$font-weight-semibold};
+  --ifm-font-weight-bold: #{$font-weight-bold};
+  --ifm-line-height-base: #{$line-height-base};
+  --ifm-heading-line-height: #{$line-height-heading};
+  
+  // Theme
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-color: #000000;
+  --ifm-code-background: #f8f9fa;
+  --ifm-code-color: #333;
+  --logo-text-color: var(--ifm-color-black);
+}
+
+[data-theme='dark'] {
+  --logo-text-color: var(--ifm-color-white);
+}

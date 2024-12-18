@@ -1,0 +1,41 @@
+.product-filter {
+    margin: 2rem 0;
+    
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+.product-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--ifm-border-radius);
+    background: var(--ifm-color-gray-100);
+    color: var(--ifm-color-gray-900);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    
+    img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+    
+    &:hover {
+        background: var(--ifm-color-gray-200);
+        text-decoration: none;
+    }
+    
+    &--active {
+        background: var(--ifm-color-primary);
+        color: white;
+        
+        &:hover {
+            background: var(--ifm-color-primary-dark);
+        }
+    }
+}
