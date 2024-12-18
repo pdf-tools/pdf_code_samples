@@ -25,7 +25,7 @@ This tutorial guides you through the process of integrating the Elastic Search E
 #### Windows
 ```shell
 # Example log location
-C:\Program Files\PdfTools\ConversionService\Logs\ConversionService-Service.log
+C:\Program Files\Pdftools\ConversionService\Logs\ConversionService-Service.log
 ```
 
 #### Docker
@@ -85,7 +85,7 @@ bin/logstash -f conversion-service-logstash.conf
 
 ## Detailed Example: Leveraging Conversion Service Log Structure
 
-The Conversion Service logs includes multiple properties such as `Timestamp`, `Level`, `ProcessName`, `Message`, `Exception`, `JobID`, `TaskID`, and `RemoteID` - see <a href="https://www.pdf-tools.com/docs/conversion-service/monitor/service-log/#log-properties">Conversion Service Log Properties</a>. These can be used to filter and visualize logs in Kibana.
+The Conversion Service logs includes multiple properties such as `Timestamp`, `Level`, `ProcessName`, `Message`, `Exception`, `JobID`, `TaskID`, and `RemoteID` - see <a href="https://www.pdftools.com/docs/conversion-service/monitor/service-log/#log-properties">Conversion Service Log Properties</a>. These can be used to filter and visualize logs in Kibana.
 
 ### Enhanced Logstash Configuration
 
@@ -147,4 +147,4 @@ GET /conversion-service-logs/_search
 }
 ```
 
-Similar tracking can be done using the REST endpoint for the Conversion Service - "<a href="https://www.pdf-tools.com/docs/conversion-service/api/advanced-api/get-job-info/">Get Job Info</a>" although this only shows the _current_ status of the job.
+Similar tracking can be done using the REST endpoint for the Conversion Service - "<a href="https://www.pdftools.com/docs/conversion-service/api/advanced-api/get-job-info/">Get Job Info</a>" although this only shows the _current_ status of the job.

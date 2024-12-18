@@ -16,7 +16,7 @@ This tutorial demonstrates a Google Chrome extension that allows users to conver
 ## Source Code
 
 The complete source code for this extension is available in our GitHub repository:
-[Chrome Extension Source Code](https://github.com/pdf-tools/pdf_code_samples/tree/main/convsrv_chrome_extension)
+[Chrome Extension Source Code](https://github.com/pdftools/pdf_code_samples/tree/main/convsrv_chrome_extension)
 
 ## Installation Instructions
 
@@ -31,4 +31,4 @@ Follow these steps to install the extension in Chrome:
 5. Click "Details" on the extension's card
 6. Scroll down and toggle "Pin to Toolbar" to make the extension easily accessible
 
-After installation, you'll see the PDF Tools icon in your Chrome toolbar, indicating that the extension is ready to use.
+After installation, you'll see the Pdftools icon in your Chrome toolbar, indicating that the extension is ready to use.

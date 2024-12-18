@@ -1,6 +1,6 @@
 # Site settings
-title: PDF Tools Code Samples
-description: A collection of code samples and tutorials for PDF Tools products
+title: Pdftools Code Samples
+description: A collection of code samples and tutorials for Pdftools products
 baseurl: "/pdf_code_samples"
 url: "https://pdf-tools.github.io"
 lang: en
@@ -15,7 +15,7 @@ products:
     description: "Scalable document conversion solution"
     icon: "/assets/images/products/conversion-service.png"
   sdk:
-    name: "PDF Tools SDK"
+    name: "Pdftools SDK"
     description: "PDF development toolkit"
     icon: "/assets/images/products/pdf-toolbox-sdk.png"
   webviewer:
@@ -26,7 +26,7 @@ products:
 # Social Media Links
 social:
   facebook: https://www.facebook.com/pdftoolsag
-  linkedin: https://www.linkedin.com/company/pdf-tools-ag
+  linkedin: https://www.linkedin.com/company/pdftools-ag
   x: https://x.com/pdftoolscom
   discord: https://discord.gg/zE83Kw6bqK
 

@@ -9,13 +9,26 @@
     margin: 0;
     padding: 0;
     background: none;
+    white-space: pre;
+    line-height: 1.5;
   }
 
   code {
     color: var(--syntax-text);
     background: none;
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    padding: 0;
+    margin: 0;
+    display: block;
   }
+}
+
+// Ensure no extra space in code blocks
+.highlighter-rouge pre.highlight {
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 // Light mode colors
