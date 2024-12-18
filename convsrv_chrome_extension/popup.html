@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pdftools Conversion Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="iconify-icon.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.svg" alt="Logo" id="logo" class="logo"><h1 class="header-title">Conversion Service</h1>
+            <div class="header-controls">
+                <div class="settings-icon" id="settingsButton">
+                    <iconify-icon icon="mdi:cog"></iconify-icon>
+                </div>
+                <div class="status-dot" id="statusDot" title="Checking service status...">
+                    <iconify-icon icon="mdi:circle" class="status-icon"></iconify-icon>
+                </div>
+            </div>
+        </div>
+
+        <div id="mainContent">
+            <div class="settings-panel" id="settingsPanel" style="display: none;">
+                <h3>Settings</h3>
+                <div class="setting-item">
+                    <label for="apiUrl">Conversion Service API Base URL:</label>
+                    <input type="text" id="apiUrl" value="http://localhost:13033/conversion/v1.0/rest">
+                </div>
+                <button id="saveSettings" class="button">
+                    <iconify-icon icon="mdi:content-save"></iconify-icon>
+                    Save
+                </button>
+            </div>
+
+            <div class="workflow-section">
+                <select id="workflow" class="dropdown">
+                    <option value="">Select Workflow</option>
+                </select>
+                <select id="profile" class="dropdown">
+                    <option value="">Select Profile</option>
+                </select>
+            </div>
+
+            <div id="dropZone" class="drop-zone">
+                <div class="drop-zone-content">
+                    <iconify-icon icon="mdi:cloud-upload"></iconify-icon>
+                    <span>Drag & drop files here<br>or click to select</span>
+                </div>
+                <input type="file" id="fileInput" multiple style="display: none;">
+            </div>
+
+            <button id="convertButton" class="button primary" disabled>
+                <iconify-icon icon="mdi:file-pdf-box"></iconify-icon>
+                Convert to PDF
+            </button>
+
+            <div class="merge-option" style="display: none">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="mergeFiles">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-text">Merge files into single PDF</span>
+                </label>
+                <input type="text" id="outputFileName" class="merge-filename" placeholder="Output filename" style="display: none">
+            </div>
+
+            <div id="fileList" class="file-list"></div>
+
+            <div id="progressOverlay" class="progress-overlay" style="display: none;">
+                <div class="progress-content">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div id="progressText">Converting...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

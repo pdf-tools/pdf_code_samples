@@ -1,0 +1,433 @@
+:root {
+    --primary-color: #0D59F2;
+    --secondary-color: #8b8b89;
+    --ifm-color-success: #2ecc71;
+    --ifm-color-info: #3498db;
+    --ifm-color-warning: #f1c40f;
+    --ifm-color-danger: #e74c3c;
+    --success-color: rgb(16, 209, 131);
+    --border-color: #214FE9;
+    
+    /* Grays */
+    --ifm-color-gray-0: #f8f9fa;
+    --ifm-color-gray-100: #f1f3f5;
+    --ifm-color-gray-200: #e9ecef;
+    --ifm-color-gray-300: #dee2e6;
+    --ifm-color-gray-400: #ced4da;
+    --ifm-color-gray-500: #adb5bd;
+    --ifm-color-gray-600: #868e96;
+    --ifm-color-gray-700: #495057;
+    --ifm-color-gray-800: #343a40;
+    --ifm-color-gray-900: #212529;
+}
+
+html, body {
+    min-height: 100vh;
+    max-height: 100vh;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 450px;
+    font-family: "Source Sans Pro", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ifm-color-gray-900);
+    border: 6px solid var(--border-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    resize: none;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+    padding-top: 8px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-title {
+    position: absolute;
+    left: 60%;
+    transform: translateX(-50%);
+    color: var(--ifm-color-success);  
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.logo {
+    height: 32px;
+    margin-right: auto;
+}
+
+.settings-icon {
+    cursor: pointer;
+    color: var(--ifm-color-gray-600);
+    transition: color 0.2s;
+}
+
+.settings-icon iconify-icon {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.settings-icon:hover {
+    color: var(--ifm-color-gray-800);
+}
+
+.settings-panel {
+    background: var(--ifm-color-gray-100);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.settings-panel h3 {
+    margin: 0 0 16px 0;
+    font-weight: 500;
+}
+
+.setting-item {
+    margin-bottom: 12px;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--ifm-color-gray-700);
+    font-weight: 500;
+}
+
+.setting-item input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--ifm-color-gray-300);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.workflow-section {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.dropdown {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--ifm-color-gray-300);
+    border-radius: 4px;
+    background: white;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.merge-option {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: var(--ifm-color-gray-100);
+    border-radius: 6px;
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: var(--ifm-color-gray-300);
+    border-radius: 20px;
+    margin-right: 12px;
+    transition: background-color 0.2s;
+}
+
+.toggle-slider:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: var(--primary-color);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+}
+
+.toggle-text {
+    font-size: 14px;
+    color: var(--ifm-color-gray-700);
+}
+
+.merge-filename {
+    margin-top: 12px;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--ifm-color-gray-300);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.merge-filename::placeholder {
+    color: var(--ifm-color-gray-500);
+}
+
+.drop-zone {
+    border: 2px dashed var(--ifm-color-gray-400);
+    border-radius: 8px;
+    padding: 32px 16px;
+    text-align: center;
+    background: var(--ifm-color-gray-0);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+}
+
+.drop-zone:hover {
+    border-color: var(--primary-color);
+    background: var(--ifm-color-gray-100);
+}
+
+.drop-zone.drag-over {
+    border-color: var(--primary-color);
+    background: var(--ifm-color-gray-100);
+}
+
+.drop-zone-text {
+    color: var(--ifm-color-gray-700);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.drop-zone-text iconify-icon {
+    font-size: 32px;
+    color: var(--ifm-color-gray-500);
+}
+
+.small-text {
+    font-size: 0.9em;
+    color: var(--ifm-color-gray-600);
+}
+
+.file-list {
+    margin-top: 24px;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 100px;
+    max-height: none;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--ifm-color-gray-100);
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.file-icon {
+    margin-right: 12px;
+    color: var(--ifm-color-gray-600);
+}
+
+.file-icon iconify-icon {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.file-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.remove-file {
+    background: none;
+    border: none;
+    color: var(--ifm-color-gray-500);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.remove-file:hover {
+    background: var(--ifm-color-gray-200);
+    color: var(--ifm-color-danger);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    background: var(--ifm-color-gray-200);
+    color: var(--ifm-color-gray-800);
+    font-family: inherit;
+}
+
+.button:hover {
+    background: var(--ifm-color-gray-300);
+}
+
+.button.primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 16px;
+}
+
+.button.primary:hover {
+    background-color: #0A47C9;
+}
+
+.button.primary:disabled {
+    background-color: var(--ifm-color-gray-400);
+    cursor: not-allowed;
+}
+
+.button.primary iconify-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.progress-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.progress-content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--ifm-color-gray-200);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+#progressText {
+    color: var(--ifm-color-gray-900);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+.status-dot {
+    cursor: help;
+}
+
+.status-dot .status-icon {
+    font-size: 24px;
+    vertical-align: middle;
+    color: var(--ifm-color-gray-400); /* Default state while checking */
+}
+
+.status-dot.online .status-icon {
+    color: var(--ifm-color-success);
+}
+
+.status-dot.offline .status-icon {
+    color: var(--ifm-color-danger);
+}
+
+.convert-section {
+    margin-top: auto;
+    padding-top: 16px;
+    background: white;
+    border-top: 1px solid var(--ifm-color-gray-200);
+}
