@@ -12,6 +12,7 @@ Welcome to the PDF Tools Code Samples repository! Here you'll find practical exa
 ## Available Tutorials
 
 - [Monitoring Conversion Service with ELK Logstash](tutorials/elk-logstash-monitoring.html) - Learn how to set up ELK stack to monitor PDF Tools Conversion Service logs.
+- [Chrome Extension for Conversion Service](tutorials/convsrv-chrome-extension.html) - A browser extension for easy document conversion using drag and drop.
 
 ## Resources
 

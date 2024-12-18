@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Chrome Extension for Conversion Service
-product: convsrv
+products: [convsrv]
 ---
 # Chrome Extension for Conversion Service
 
