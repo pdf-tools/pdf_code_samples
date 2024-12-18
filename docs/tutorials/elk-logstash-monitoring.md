@@ -4,13 +4,13 @@ title: Monitoring Conversion Service with ELK Logstash
 products: [convsrv]
 ---
 
-# Tutorial: Monitoring PDF Tools Conversion Service Logs with ELK Stack
+# Tutorial: Monitoring Pdftools Conversion Service Logs with ELK Stack
+
+{% include conversion-service-info.html %}
 
 {% include disclaimer.html %}
 
-This tutorial guides you through the process of integrating the Elastic Search ELK stack to monitor logs from the PDF Tools Conversion Service. It includes a quick setup for immediate use and a more detailed example tailored to the structure of Conversion Service logs.
-
-{% include conversion-service-info.html %}
+This tutorial guides you through the process of integrating the Elastic Search ELK stack to monitor logs from the Pdftools Conversion Service. It includes a quick setup for immediate use and a more detailed example tailored to the structure of Conversion Service logs.
 
 ## Prerequisites
 

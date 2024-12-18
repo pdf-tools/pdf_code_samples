@@ -3,15 +3,15 @@ layout: default
 title: Chrome Extension for Conversion Service
 products: [convsrv]
 ---
-# Chrome Extension for Conversion Service
+# Chrome Extension for the Pdftools Conversion Service
+
+{% include conversion-service-info.html %}
 
 {% include disclaimer.html %}
 
 This tutorial demonstrates a Google Chrome extension that allows users to convert documents using the Conversion Service, simply by dragging files into their browser. The extension provides a convenient way to convert documents without leaving your browser.
 
 <img src="{{ site.baseurl }}/assets/images/tutorials/convsrv-chrome-extension.png" alt="Chrome Extension Screenshot" width="25%" />
-
-{% include conversion-service-info.html %}
 
 ## Source Code
 
