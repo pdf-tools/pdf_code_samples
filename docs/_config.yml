@@ -20,15 +20,18 @@ products:
     icon: "/assets/images/products/pdf-toolbox-sdk.png"
   webviewer:
     name: "Web Viewer"
-    description: "Browser-based PDF viewing solution"
-    icon: "/assets/images/products/pdf-web-viewer.png"
+    description: "Browser-based PDF viewer"
+    icon: "/assets/images/products/web-viewer.png"
 
 # Social Media Links
 social:
   facebook: https://www.facebook.com/pdftoolsag
-  linkedin: https://www.linkedin.com/company/pdftools-ag
+  linkedin: https://www.linkedin.com/company/pdf-tools-ag
   x: https://x.com/pdftoolscom
   discord: https://discord.gg/zE83Kw6bqK
+
+# Google Analytics
+google_analytics: G-5ZN922RFGN  # Only enabled in production environment
 
 # Build settings
 markdown: kramdown
