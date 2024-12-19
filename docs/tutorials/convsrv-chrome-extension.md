@@ -16,7 +16,7 @@ This tutorial demonstrates a Google Chrome extension that allows users to conver
 ## Source Code
 
 The complete source code for this extension is available in our GitHub repository:
-[Chrome Extension Source Code](https://github.com/pdftools/pdf_code_samples/tree/main/convsrv_chrome_extension)
+[Chrome Extension Source Code](https://github.com/pdf-tools/pdf_code_samples/tree/main/convsrv_chrome_extension)
 
 ## Installation Instructions
 
