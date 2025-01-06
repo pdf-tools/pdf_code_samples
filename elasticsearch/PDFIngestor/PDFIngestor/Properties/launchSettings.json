@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "PDFIngestor (Watch Mode)": {
+      "commandName": "Project",
+      "commandLineArgs": "watch ./sample-pdfs elastic changeme https://localhost:9200/pdf-search/_doc"
+    },
+    "PDFIngestor (Exec Mode)": {
+      "commandName": "Project",
+      "commandLineArgs": "exec ./sample-pdfs/sample.pdf elastic changeme https://localhost:9200/pdf-search/_doc"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# .NET build output
+bin/
+obj/
+
+# Settings files with sensitive data
+appsettings.json
+
+# Sample PDFs
+PDFIngestor/sample-pdfs/*.pdf
