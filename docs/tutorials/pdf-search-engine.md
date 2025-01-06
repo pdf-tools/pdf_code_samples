@@ -17,9 +17,9 @@ Managing and searching through large archives of PDF documents can be a challeng
 
 The project includes:
 
-PDFIngestor – A C# application that processes PDF files by extracting text and metadata, then indexes them into Elasticsearch.
-
-Frontend – A modern React-based search interface built with Next.js and powered by [Searchkit](https://www.searchkit.co/) for filtering and faceted search.
+- **PDFIngestor** – A C# application that processes PDF files by extracting text and metadata, then indexes them into Elasticsearch.
+- **Search Frontend** – A modern React-based search interface built with Next.js and powered by [Searchkit](https://www.searchkit.co/) for filtering and faceted search.
+- **Elasticsearch Guide** - A step-by-step guide to get up and running with Elasticsearch in your development environment.
 
 ### Source Code
 
