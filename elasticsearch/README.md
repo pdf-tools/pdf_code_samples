@@ -222,14 +222,13 @@ The PDFIngestor can operate in two modes:
    - The PDFIngestor will process all specified files then exit
    - Ideal for automation and integration with the Conversion Service
 
-Get help with the PDFIngestor:
-
+**Note**: to get help with the PDFIngestor...
     ```bash
     ./PDFIngestor -h # Docker
     PDFIngestor.exe -h # Windows
     ```
 
-    ```
+    ```bash
     PDFIngestor - A tool to ingest PDF files into Elasticsearch
 
     Usage:
@@ -249,7 +248,7 @@ Get help with the PDFIngestor:
     ELASTIC_PASSWORD - Elasticsearch password
     ```
 
-###### Watch Mode
+###### Watch Mode:
     ```bash
     ./PDFIngestor watch <input-directory> -u <elasticsearch-username> -p <elasticsearch-password> -e <elasticsearch-endpoint>
     ```
@@ -263,7 +262,7 @@ Example:
 
 **Note:** the endpoint URL here is the _default_ endpoint PDFIngestor will use if no `-e` flag is specified.
 
-###### Execute Mode
+###### Execute Mode:
     ```bash
     ./PDFIngestor exec <file1> [file2...]
     ```
