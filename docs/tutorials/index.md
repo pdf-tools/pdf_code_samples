@@ -3,7 +3,7 @@ layout: default
 title: PDF Tools Tutorials
 ---
 
-# PDF Tools Tutorials
+# Pdftools Developer Tutorials
 
 {% include product-filter.html %}
 

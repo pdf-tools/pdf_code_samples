@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Conversion Service Tutorials
+title: Pdftools Conversion Service Tutorials
 ---
 
-# PDF Tools Conversion Service Tutorials
+# Pdftools Conversion Service Tutorials
 
 {% include conversion-service-info.html %}
 

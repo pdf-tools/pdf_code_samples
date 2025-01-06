@@ -1,9 +1,9 @@
 ---
 layout: default
-title: PDF Tools SDK Tutorials
+title: Pdftools Development SDK Tutorials
 ---
 
-# PDF Tools SDK Tutorials
+# Pdftools SDK Tutorials
 
 {% include sdk-info.html %}
 

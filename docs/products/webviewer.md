@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Web Viewer Tutorials
+title: Pdftools PDF Web Viewer SDK Tutorials
 ---
 
-# PDF Tools Web Viewer Tutorials
+# Pdftools PDF Web Viewer SDK Tutorials
 
 {% include viewer-info.html %}
 
