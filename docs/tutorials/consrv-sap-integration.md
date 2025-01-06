@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Convert Documents in SAP to PDF with the Pdftools Conversion Service using ABAP
+title: Convert Documents from SAP to PDF with the Pdftools Conversion Service using ABAP
 products: [convsrv]
 ---
-## Convert Documents in SAP to PDF with the Pdftools Conversion Service using ABAP
+## Convert Documents from SAP to PDF with the Pdftools Conversion Service using ABAP
 
 {% include conversion-service-info.html %}
 
