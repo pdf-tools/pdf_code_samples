@@ -4,11 +4,13 @@ title: Monitoring Conversion Service with ELK Logstash
 products: [convsrv]
 ---
 
-# Tutorial: Monitoring Pdftools Conversion Service Logs with ELK Stack
+# Monitoring Pdftools Conversion Service Logs with ELK Stack
 
 {% include conversion-service-info.html %}
 
 {% include disclaimer.html %}
+
+## Introduction
 
 This tutorial guides you through the process of integrating the Elastic Search ELK stack to monitor logs from the Pdftools Conversion Service. It includes a quick setup for immediate use and a more detailed example tailored to the structure of Conversion Service logs.
 
@@ -38,7 +40,7 @@ sudo docker exec <container_name> tail -f /var/log/convsrv/ConversionService-Ser
 
 Create a Logstash configuration file `conversion-service-logstash.conf`:
 
-```plaintext
+```json
 input {
   file {
     path => "/path/to/ConversionService-Service.log"
@@ -91,7 +93,7 @@ The Conversion Service logs includes multiple properties such as `Timestamp`, `L
 
 For structured parsing and advanced use, include additional processing in your Logstash configuration:
 
-```plaintext
+```json
 filter {
   csv {
     separator => ","

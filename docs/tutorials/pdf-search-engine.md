@@ -3,11 +3,13 @@ layout: default
 title: PDF Search Engine with Pdftools Conversion Service and Elasticsearch
 products: [convsrv]
 ---
-# PDF Search Engine with Pdftools Conversion Service and Elasticsearch
+## PDF Search Engine with Pdftools Conversion Service and Elasticsearch
 
 {% include conversion-service-info.html %}
 
 {% include disclaimer.html %}
+
+### Introduction
 
 Managing and searching through large archives of PDF documents can be a challenging task. Pdftools Conversion Service, combined with Elasticsearch, offers a powerful solution to this problem by enabling full-text search, metadata filtering, and seamless PDF archiving. This tutorial introduces a project that demonstrates how to build a simple yet effective PDF search engine using these tools.
 
@@ -19,14 +21,14 @@ PDFIngestor – A C# application that processes PDF files by extracting text and
 
 Frontend – A modern React-based search interface built with Next.js and powered by [Searchkit](https://www.searchkit.co/) for filtering and faceted search.
 
-## Source Code
+### Source Code
 
 The complete source code for this product is available in our GitHub repository:
 [🔍 PDF Search Engine with Pdftools Conversion Service and Elasticsearch](https://github.com/pdf-tools/pdf_code_samples/tree/main/elasticsearch).
 
 See also [Monitoring Pdftools Conversion Service Logs with ELK Stack](./elk-stack-logs.md).
 
-## Key Use Cases
+### Key Use Cases
 
 - **Understand Your PDF Archives** – Want to know exactly what's in your PDF/A archive? This project lets you index and search PDF contents, extracting key metadata such as authors, number of pages, and fonts.
 
@@ -40,7 +42,7 @@ By using Elasticsearch as a scalable and powerful search engine, combined with P
 - **Legal document management**
 - **Cataloging research papers**
 
-## How It Works
+### How It Works
 
 The architecture of the project is straightforward:
 
@@ -58,7 +60,7 @@ The architecture of the project is straightforward:
                        [Elasticsearch] <-- [React Frontend]
    ```
 
-## Getting Started
+### Getting Started
 
 For full instructions on how to set up Elasticsearch, run the PDFIngestor, and deploy the frontend, visit the GitHub repository: [https://github.com/pdf-tools/pdf_code_samples/tree/main/elasticsearch](https://github.com/pdf-tools/pdf_code_samples/tree/main/elasticsearch)
 

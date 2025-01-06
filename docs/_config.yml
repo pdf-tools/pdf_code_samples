@@ -13,15 +13,15 @@ products:
   convsrv:
     name: "Conversion Service"
     description: "Scalable document conversion solution"
-    icon: "/assets/images/products/conversion-service.png"
+    icon: "/assets/images/products/conversion-service.svg"
   sdk:
     name: "Pdftools SDK"
     description: "PDF development toolkit"
-    icon: "/assets/images/products/pdf-toolbox-sdk.png"
+    icon: "/assets/images/products/pdftools-sdk.svg"
   webviewer:
     name: "Web Viewer"
     description: "Browser-based PDF viewer"
-    icon: "/assets/images/products/web-viewer.png"
+    icon: "/assets/images/products/pdf-viewer-sdk.svg"
 
 # Social Media Links
 social:
