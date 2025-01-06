@@ -78,8 +78,8 @@ Note that the `-d` option is used to run Elasticsearch in the background. You ca
 
     # Add http cors
     http.cors:
-    enabled: true
-    allow-origin: /https?:\/\/localhost(:[0-9]+)?/
+      enabled: true
+      allow-origin: /https?:\/\/localhost(:[0-9]+)?/
     ```
 
 Note that setting `xpack.security.enabled: false` is not secure! We do this only for develepment to get up and running quickly.
@@ -223,54 +223,55 @@ The PDFIngestor can operate in two modes:
    - Ideal for automation and integration with the Conversion Service
 
 **Note**: to get help with the PDFIngestor...
-    ```bash
-    ./PDFIngestor -h # Docker
-    PDFIngestor.exe -h # Windows
-    ```
 
-    ```bash
-    PDFIngestor - A tool to ingest PDF files into Elasticsearch
+```bash
+./PDFIngestor -h # Docker
+PDFIngestor.exe -h # Windows
+```
 
-    Usage:
-    PDFIngestor watch <folder>      Watch a folder for new PDF files
-    PDFIngestor exec <file1> [file2...]  Process one or more PDF files
+```
+PDFIngestor - A tool to ingest PDF files into Elasticsearch
 
-    Optional Parameters:
-    -e, --endpoint <url>   Elasticsearch endpoint URL
-                            (default: http://localhost:9200/convsrv/_doc)
-    -u, --username <user>  Elasticsearch username
-    -p, --password <pass>  Elasticsearch password
+Usage:
+  PDFIngestor watch <folder>      Watch a folder for new PDF files
+  PDFIngestor exec <file1> [file2...]  Process one or more PDF files
 
-    Environment Variables:
-    The following environment variables can be set in a .env file:
-    ELASTIC_ENDPOINT  - Elasticsearch endpoint URL
-    ELASTIC_USER     - Elasticsearch username
-    ELASTIC_PASSWORD - Elasticsearch password
-    ```
+Optional Parameters:
+  -e, --endpoint <url>   Elasticsearch endpoint URL
+                         (default: http://localhost:9200/convsrv/_doc)
+  -u, --username <user>  Elasticsearch username
+  -p, --password <pass>  Elasticsearch password
+
+Environment Variables:
+  The following environment variables can be set in a .env file:
+  ELASTIC_ENDPOINT  - Elasticsearch endpoint URL
+  ELASTIC_USER     - Elasticsearch username
+  ELASTIC_PASSWORD - Elasticsearch password
+```
 
 ###### Watch Mode:
-    ```bash
-    ./PDFIngestor watch <input-directory> -u <elasticsearch-username> -p <elasticsearch-password> -e <elasticsearch-endpoint>
-    ```
+```bash
+./PDFIngestor watch <input-directory> -u <elasticsearch-username> -p <elasticsearch-password> -e <elasticsearch-endpoint>
+```
 
 **Note:** the example Elasticsearch configuration we used has authentication disabled, so you can omit the `-u` and `-p` flags.
 
 Example:
-    ```bash
-    ./PDFIngestor watch ./sample-pdfs -e https://localhost:9200/convsrv/_doc
-    ```
+```bash
+./PDFIngestor watch ./sample-pdfs -e https://localhost:9200/convsrv/_doc
+```
 
 **Note:** the endpoint URL here is the _default_ endpoint PDFIngestor will use if no `-e` flag is specified.
 
 ###### Execute Mode:
-    ```bash
-    ./PDFIngestor exec <file1> [file2...]
-    ```
+```bash
+./PDFIngestor exec <file1> [file2...]
+```
 
 Example:
-    ```bash
-    ./PDFIngestor exec ./document1.pdf ./document2.pdf
-    ```
+```bash
+./PDFIngestor exec ./document1.pdf ./document2.pdf
+```
 
 ###### Integration with Pdftools Conversion Service
 The PDFIngestor can be integrated with the Pdftools Conversion Service using the [Execute Command connector](https://www.pdf-tools.com/docs/conversion-service/integrate/connectors/other-connectors/). Configure it as follows:
@@ -279,14 +280,14 @@ The PDFIngestor can be integrated with the Pdftools Conversion Service using the
 2. Set the command to point to your PDFIngestor executable
 3. Use the following argument pattern e.g.
 
-    ```bash
-    /path/to/PDFIngestor exec [output:FILES]
-    ```
+```bash
+/path/to/PDFIngestor exec [output:FILES]
+```
 
-    ```
-    Command: C:\Path\To\PDFIngestor.exe
-    Arguments: exec [output:FILES]
-    ```
+```
+Command: C:\Path\To\PDFIngestor.exe
+Arguments: exec [output:FILES]
+```
 
 The `[output:FILES]` placeholder will be replaced by the Conversion Service with a space-separated list of converted PDF files.
 
