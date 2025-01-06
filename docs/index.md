@@ -20,5 +20,5 @@ Welcome to the Pdftools Code Samples repository! Here you'll find practical exam
 ## Resources
 
 - [Pdftools Website](https://www.pdf-tools.com)
-- [Official Documentation](https://www.pdf-tools.com/pdf20/en/products/pdf-rendering-desktop-server/pdf-converter-services/)
-- [Support](https://www.pdf-tools.com/pdf20/en/contact/)
+- [Official Documentation](https://www.pdf-tools.com/docs/)
+- [Support](https://www.pdf-tools.com/contact/)
