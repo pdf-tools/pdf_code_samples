@@ -5,7 +5,7 @@ title: PDF Tools SDK Tutorials
 
 # PDF Tools SDK Tutorials
 
-Coming soon!
+{% include sdk-info.html %}
 
 {% for tutorial in site.pages %}
     {% if tutorial.url contains '/tutorials/' and tutorial.products contains 'sdk' %}

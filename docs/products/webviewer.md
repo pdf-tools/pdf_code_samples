@@ -5,7 +5,7 @@ title: Web Viewer Tutorials
 
 # PDF Tools Web Viewer Tutorials
 
-Coming soon!
+{% include viewer-info.html %}
 
 {% for tutorial in site.pages %}
     {% if tutorial.url contains '/tutorials/' and tutorial.products contains 'webviewer' %}
