@@ -15,6 +15,7 @@ import {
   RangeInput,
   useQueryRules
 } from 'react-instantsearch'
+
 import Client from '@searchkit/instantsearch-client'
 
 const searchClient = Client({
@@ -66,7 +67,6 @@ export default function Web() {
   return (
     <div className="">
       <InstantSearch indexName="convsrv" searchClient={searchClient} routing>
-      {/* <InstantSearch indexName="test_index" searchClient={searchClient} routing> */}
         <Configure hitsPerPage={15} />
         <div className="container">
           <div className="search-panel">
@@ -80,6 +80,12 @@ export default function Web() {
                 </Panel>
                 <Panel header="Author">
                   <RefinementList attribute="author" searchable />
+                </Panel>
+                <Panel header="Creator">
+                  <RefinementList attribute="creator" />
+                </Panel>
+                <Panel header="Producer">
+                  <RefinementList attribute="producer" />
                 </Panel>
                 <Panel header="Number of Pages">
                   <RangeInput attribute="numberOfPages" />

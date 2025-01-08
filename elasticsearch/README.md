@@ -107,6 +107,12 @@ Note that setting `xpack.security.enabled: false` is not secure! We do this only
                 "author": {
                     "type": "keyword"
                 },
+                "creator": {
+                    "type": "keyword"
+                },
+                "producer": {
+                    "type": "keyword"
+                },
                 "numberOfPages": {
                     "type": "integer"
                 },
@@ -115,6 +121,10 @@ Note that setting `xpack.security.enabled: false` is not secure! We do this only
                 },
                 "fontNames": {
                     "type": "keyword"
+                },
+                "modDate": {
+                    "type": "date",
+                    "format": "strict_date_time"
                 }
             }
         }

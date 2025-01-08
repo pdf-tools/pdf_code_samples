@@ -18,6 +18,8 @@ const apiClient = API(
         { field: 'title', weight: 3 },
         { field: 'fileName', weight: 1 },
         { field: 'author', weight: 1 },
+        { field: 'creator', weight: 1 },
+        { field: 'producer', weight: 1 },
         'data'
       ],
       result_attributes: [
@@ -25,10 +27,9 @@ const apiClient = API(
         'fileName',
         'data',
         'author',
-        'numberOfPages',
-        'signatureFieldExists',
         'creator',
-        'producer'
+        'producer.keyword',
+        'numberOfPages'
       ],
       facet_attributes: [
         {
@@ -39,7 +40,26 @@ const apiClient = API(
         {
           attribute: 'author',
           field: 'author',
-          type: 'string'
+          type: 'string',
+          filterQuery: (field: string, value: string) => {
+            return { prefix: { ['author']: value } }
+          }
+        },
+        {
+          attribute: 'creator',
+          field: 'creator',
+          type: 'string',
+          filterQuery: (field: string, value: string) => {
+            return { prefix: { ['creator']: value } }
+          }
+        },
+        {
+          attribute: 'producer',
+          field: 'producer',
+          type: 'string',
+          filterQuery: (field: string, value: string) => {
+            return { prefix: { ['producer']: value } }
+          }
         },
         {
           attribute: 'conformance',
@@ -50,6 +70,11 @@ const apiClient = API(
           attribute: 'fontNames',
           field: 'fontNames',
           type: 'string'
+        },
+        {
+          attribute: 'modDate',
+          field: 'modDate',
+          type: 'date'
         }
       ],
       query_rules: [
@@ -63,10 +88,10 @@ const apiClient = API(
                 'conformance',
                 'fontNames',
                 'author',
+                'creator',
+                'producer',
                 'numberOfPages',
-                'signatureFieldExists',
-                // 'creator',
-                // 'producer'
+                'modDate'
               ]
             }
           ]
